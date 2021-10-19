@@ -15,18 +15,18 @@
         
         <h:form id="registro">
             <h:panelGrid columns="3">
-                 <h:outputLabel value="Introduce Nombre:" />
+                <h:outputLabel value="#{msg.usuario_nombre}" />
                  <h:inputText value="#{registroUsuarioBean.usuario.nombre}" required="true" id="nombre"/>
                   <h:message for="nombre" />
                   
-                  <h:outputLabel value="Introduce Clave:" />
+                  <h:outputLabel value="#{msg.usuario_clave}" />
                   <h:inputSecret value="#{registroUsuarioBean.clave}" id="clave" required="true">
                       <f:validateLength minimum="5" maximum="10" />
                   </h:inputSecret>
                   <h:message for="clave"/>
                   
                    <h:outputLabel value="Introduce Código" />
-                 <h:inputText value="#{registroUsuarioBean.codigo}" id="codigo"/>
+                  <h:inputText value="#{registroUsuarioBean.codigo}" id="codigo"/>
                   <h:message for="codigo" />
                   
                   
