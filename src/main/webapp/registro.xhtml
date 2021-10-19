@@ -1,20 +1,43 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Registro</title>
     </h:head>
     <h:body>
         <h1>Registro Usuarios</h1>
         
-        <h:form>
-            <h:panelGrid columns="2">
+        <hr></hr>
+        <h:messages errorStyle="color:red;" globalOnly="true"/>
+        <hr></hr>
+        
+        <h:form id="registro">
+            <h:panelGrid columns="3">
                  <h:outputLabel value="Introduce Nombre:" />
-                 <h:inputText value="#{registroUsuarioBean.nombre}" />
+                 <h:inputText value="#{registroUsuarioBean.usuario.nombre}" required="true" id="nombre"/>
+                  <h:message for="nombre" />
+                  
                   <h:outputLabel value="Introduce Clave:" />
-                  <h:inputSecret value="#{registroUsuarioBean.clave}"/>
+                  <h:inputSecret value="#{registroUsuarioBean.clave}" id="clave" required="true">
+                      <f:validateLength minimum="5" maximum="10" />
+                  </h:inputSecret>
+                  <h:message for="clave"/>
+                  
+                   <h:outputLabel value="Introduce Código" />
+                 <h:inputText value="#{registroUsuarioBean.codigo}" id="codigo"/>
+                  <h:message for="codigo" />
+                  
+                  
+                     <h:outputLabel value="Introduce Fecha Alta:" />
+                     <h:inputText value="#{registroUsuarioBean.fechaAlta}" id="fAlta">
+                         <f:convertDateTime pattern="dd/mm/yyyy" />
+                     </h:inputText>
+                  <h:message for="fAlta" />
+                  
                   <h:commandButton value="Grabar" action="#{registroUsuarioBean.btnGrabarRegistro()}" />
+                  <h:commandButton value="Cancelar" action="index" immediate="true" />
             </h:panelGrid>
             
         </h:form>

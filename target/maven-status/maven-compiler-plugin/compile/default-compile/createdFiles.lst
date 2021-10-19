@@ -1,2 +1,8 @@
 com/curso/jsf/JAXRSConfiguration.class
+com/curso/servicios/CodigosDescuentosService.class
+com/curso/beans/UsuarioBean.class
+com/curso/jsf/HelloBean.class
+com/curso/web/AltaCodigoDescuentoBean.class
+com/curso/entidades/DiscountCode.class
+com/curso/jsf/RegistroUsuarioBean.class
 com/curso/jsf/resources/JavaEE8Resource.class

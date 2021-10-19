@@ -16,7 +16,19 @@
         </h:form>
         
         
-        Usuario Registrado : #{registroUsuarioBean.nombre}
+        Usuario Registrado : #{usuarioBean.nombre}
+        
+        <hr></hr>
+        <h3>Menú</h3>
+        
+        <ul>
+            <li>
+                <h:link outcome="registro">Ir a registro</h:link>
+            </li>
+            <li>
+                <h:link outcome="alta-descuento">Ir a alta nuevo descuento</h:link>
+            </li>
+        </ul>
         
     </h:body>
 </html>
