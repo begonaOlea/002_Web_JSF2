@@ -15,7 +15,7 @@ public class UsuarioBean implements Serializable {
 
     
     private String nombre;
-    private String idioma;
+    private String idioma  = "es";
     
     public UsuarioBean() {
         System.out.println("...... iniciando UsuarioBean ambito Sesión");
@@ -37,6 +37,11 @@ public class UsuarioBean implements Serializable {
         this.idioma = idioma;
     }
     
+    //accion cambiar el idioma
+    public String btnCambiaIdioma(String idioma){
+        this.idioma = idioma;
+        return null; // se renderiza la misma pagina que ha llamado
+    }
     
-    
+  
 }

@@ -29,8 +29,11 @@
             <base-name>com.curso.web.mensajes.textos</base-name>
             <var>msg</var>
         </resource-bundle>
+        
         <locale-config>
             <default-locale>es</default-locale>
+            <supported-locale>en</supported-locale>
+            <supported-locale>eu</supported-locale>
         </locale-config>
     </application>
     
