@@ -1,49 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:c="http://java.sun.com/jsp/jstl/core"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <f:view locale="#{usuarioBean.idioma}">  
-    <h:head>
-        <title>Facelet Title</title>
-    </h:head>
-    <h:body>
-      
-        <h:form id="formIdioma">
-            <h:commandLink value="es" action="#{usuarioBean.btnCambiaIdioma('es')}" /> /
-            <h:commandLink value="en" action="#{usuarioBean.btnCambiaIdioma('en')}" /> /
-            <h:commandLink value="eu" action="#{usuarioBean.btnCambiaIdioma('eu')}" />
-        </h:form>
-        
-        
-        <h:form id="formSaludo">
-            Nombre: <h:inputText value="#{helloBean.name}" />
-           <h:commandButton value="Enviar" action="response"/> 
-           
-           <!-- action  hemos puesto el nombre de la pagina JSF response.xhtml que va a responder -->
-        </h:form>
-        
-        <h:outputFormat value="#{msg.saludo}">
-            <f:param value="Begoña" />
-            <f:param value="Registros" />
-        </h:outputFormat>
-        
-        Usuario Registrado : #{usuarioBean.nombre}
-        
-        <hr></hr>
-        <h3>Menú</h3>
-        
-        <ul>
-            <li>
-                <h:link outcome="registro">Ir a registro</h:link>
-            </li>
-            <li>
-                <h:link outcome="alta-descuento">Ir a alta nuevo descuento</h:link>
-            </li>
-        </ul>
-        
-    </h:body>
-</f:view>  
-</html>
 
+    <body>
+
+        <ui:composition template="./WEB-INF/plantillas/plantilla.xhtml">
+
+            <ui:define name="titulo">
+                index
+            </ui:define>
+
+            <ui:define name="cabecera">
+                INICIO
+            </ui:define>
+
+            <ui:define name="contenido">
+                <h:form id="formSaludo">
+                    Nombre: <h:inputText value="#{helloBean.name}" />
+                    <h:commandButton value="Enviar" action="response"/> 
+
+                    <!-- action  hemos puesto el nombre de la pagina JSF response.xhtml que va a responder -->
+                </h:form>
+
+                <h:outputFormat value="#{msg.saludo}">
+                    <f:param value="Begoña" />
+                    <f:param value="Registros" />
+                </h:outputFormat>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class UsuarioBean implements Serializable {
 
     
-    private String nombre;
+    private String nombre = "guest";
     private String idioma  = "es";
     
     public UsuarioBean() {
