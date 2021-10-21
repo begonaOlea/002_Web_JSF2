@@ -18,14 +18,19 @@
 
             <ui:define name="contenido">
                 <h2>Alta Nuevo Descuento </h2>
-                <h:form>
+                <h:form >
                     <h:panelGrid columns="2">
                         <h:outputLabel value="Código Descuento" />
                         <h:inputText value="#{altaCodigoDescuentoBean.descuento.discountCode}" />
                         <h:outputLabel value="Rate:" />
                         <h:inputText value="#{altaCodigoDescuentoBean.descuento.rate}"/>
-                        <h:commandButton value="Grabar" action="#{altaCodigoDescuentoBean.btnGrabar()}" />
+                        <h:commandButton value="Grabar" 
+                                         action="#{altaCodigoDescuentoBean.btnGrabar()}" 
+                                         disabled="#{not usuarioBean.administrador}"/>
                         <h:commandButton value="Cancelar" action="index" immediate="true" />
+                        
+                        
+                        
                     </h:panelGrid>
 
                 </h:form>

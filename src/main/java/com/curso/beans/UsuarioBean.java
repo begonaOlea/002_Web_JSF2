@@ -16,6 +16,7 @@ public class UsuarioBean implements Serializable {
     
     private String nombre = "guest";
     private String idioma  = "es";
+    private boolean administrador = true;
     
     public UsuarioBean() {
         System.out.println("...... iniciando UsuarioBean ambito Sesión");
@@ -36,6 +37,12 @@ public class UsuarioBean implements Serializable {
     public void setIdioma(String idioma) {
         this.idioma = idioma;
     }
+
+    public boolean isAdministrador() {
+        return administrador;
+    }
+    
+    
     
     //accion cambiar el idioma
     public String btnCambiaIdioma(String idioma){

@@ -40,7 +40,8 @@
                                 <h:link outcome="registro">Ir a registro</h:link>
                             </li>
                             <li>
-                                <h:link outcome="alta-descuento">Ir a alta nuevo descuento</h:link>
+                                <h:link outcome="alta-descuento"
+                                        rendered="#{usuarioBean.administrador}">Ir a alta nuevo descuento</h:link>
                             </li>
                         </ul>
 

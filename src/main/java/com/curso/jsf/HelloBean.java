@@ -1,17 +1,13 @@
 package com.curso.jsf;
 
-import javax.annotation.ManagedBean;
-import javax.faces.bean.RequestScoped;
-//import javax.inject.Named;
-//import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+import javax.enterprise.context.RequestScoped;
 
 /**
  *
  * @author begonaolea
  */
-//@Named(value = "helloBean")
-//@RequestScoped
-@ManagedBean
+@Named(value = "helloBean")
 @RequestScoped
 public class HelloBean {   //  #{helloBean.name}
 
